@@ -11,6 +11,8 @@ class Igros::CLI
   end
 
   def sequence
+    puts "Please chose a number between 1 and 100. When you are ready hit Enter."
+    gets.strip
     my_number3
     my_number5
     my_number7
@@ -19,10 +21,13 @@ class Igros::CLI
   end
 
   def my_number3
-    puts "Please chose a number between 1 and 100. When you are ready hit Enter."
-    gets.strip
     puts "Please divide your number into three and submit the remainder."
-    @x3 = gets.strip.to_i
+    begin
+      @x3 = Integer(gets.chomp)
+    rescue
+      puts "Nice try! That's not even a number..."
+      retry
+    end
     unless @x3 < 3
       puts "Are you sure? it sounds like your math is off."
       my_number3
@@ -33,7 +38,12 @@ class Igros::CLI
 
   def my_number5
     puts "\nNow, please divide your number into five and submit the remainder."
-    @x5 = gets.strip.to_i
+    begin
+      @x5 = Integer(gets.chomp)
+    rescue
+      puts "Nice try! That's not even a number..."
+      retry
+    end
     unless @x5 < 5
       puts "Are you sure? it sounds like your math is off."
       my_number5
@@ -44,7 +54,12 @@ class Igros::CLI
 
   def my_number7
     puts "\nAlmost done! Now please divide your number into seven and submit the remainder."
-    @x7 = gets.strip.to_i
+    begin
+      @x7 = Integer(gets.chomp)
+    rescue
+      puts "Nice try! That's not even a number..."
+      retry
+    end
     unless @x7 < 7
       puts "Are you sure? it sounds like your math is off."
       my_number7
