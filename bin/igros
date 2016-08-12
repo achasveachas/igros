@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require_relative '../lib/igros'
+
+Igros::CLI.new.call

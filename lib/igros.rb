@@ -1,5 +1,2 @@
-require "igros/version"
-
-module Igros
-  # Your code goes here...
-end
+require_relative "./igros/version"
+require_relative './igros/cli'
