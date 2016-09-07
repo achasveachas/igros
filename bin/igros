@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require "bundler/setup"
-require "igros"
+#require "igros"
 require_relative '../lib/igros'
 
 Igros::CLI.new.call
